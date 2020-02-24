@@ -1,3 +1,5 @@
 module.exports = {
-    Account: require("./account")
+  Question: require("./question"),
+
+  Account: require("./account")
   };
