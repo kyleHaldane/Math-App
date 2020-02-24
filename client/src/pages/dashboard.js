@@ -8,17 +8,17 @@ function Dashboard() {
     return(
         <div>
             <Navbar />
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
                         <StartBtn />
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
+                <div className="row">
+                    <div className="col-6">
                         <TestResults />
                     </div>
-                    <div class="col-6">
+                    <div className="col-6">
                         <OverallTest />
                     </div>
                 </div>
