@@ -4,6 +4,7 @@
   "description": "Mern Demo with authentication using passport local strategy",
   "main": "server.js",
   "scripts": {
+    "seed": "node scripts/seedDB.js",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
@@ -34,7 +35,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "reactstrap": "^8.4.1",
-    "seed": "node scripts/seedDB.js"
+    "reactstrap": "^8.4.1"
+   
   }
 }

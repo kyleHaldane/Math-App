@@ -15,7 +15,7 @@ const questonSeed = [
     choiceB: "3x-1",
     choiceC: "3x+9",
     choiceD: "13x-6",
-    answered: False,
+    answered: false,
     correct: "3x+9",
     date: new Date(Date.now())
   },
@@ -25,7 +25,7 @@ const questonSeed = [
     choiceB: "(0, 3)",
     choiceC: "(6, -3)",
     choiceD: "",
-    answered: False,
+    answered: false,
     correct: "(0, 3)",
     date: new Date(Date.now())
   },
@@ -35,7 +35,7 @@ const questonSeed = [
     choiceB: "$16,200",
     choiceC: "$21,600",
     choiceD: "$29,700",
-    answered: False,
+    answered: false,
     correct: "$21,600",
     date: new Date(Date.now())
   },
@@ -45,7 +45,7 @@ const questonSeed = [
     choiceB: "33",
     choiceC: "22",
     choiceD: "16",
-    answered: False,
+    answered: false,
     correct: "22",
     date: new Date(Date.now())
   },
@@ -55,7 +55,7 @@ const questonSeed = [
     choiceB: "-3<x<1",
     choiceC: "1<x<3",
     choiceD: "3<x<4",
-    answered: False,
+    answered: false,
     correct: "-3<x<1",
     date: new Date(Date.now())
   },
@@ -65,7 +65,7 @@ const questonSeed = [
     choiceB: "150",
     choiceC: "200",
     choiceD: "300",
-    answered: False,
+    answered: false,
     correct: "200",
     date: new Date(Date.now())
   },
@@ -75,7 +75,7 @@ const questonSeed = [
     choiceB: "At least 95% of people who read books will dislike this movie.",
     choiceC: "Most people who dislike this book will like this movie.",
     choiceD: "Most people who like this book will dislike this movie.",
-    answered: False,
+    answered: false,
     correct: "Most people who like this book will dislike this movie.",
     date: new Date(Date.now())
   },
@@ -85,30 +85,10 @@ const questonSeed = [
     choiceB: "70",
     choiceC: "81",
     choiceD: "38",
-    answered: False,
+    answered: false,
     correct: "72",
     date: new Date(Date.now())
-  },
-  {
-    question: "",
-    choiceA: "",
-    choiceB: "",
-    choiceC: "",
-    choiceD: "",
-    answered: False,
-    correct: "",
-    date: new Date(Date.now())
-  },
-  {
-    question: "",
-    choiceA: "",
-    choiceB: "",
-    choiceC: "",
-    choiceD: "",
-    answered: False,
-    correct: "",
-    date: new Date(Date.now())
-  },
+  }
 ];
 
 db.Book
