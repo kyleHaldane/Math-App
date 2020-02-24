@@ -13,6 +13,7 @@ function Test(){
 
   //Tracking question number with reducer
   const questionNumber = {count: 0};
+  
   function reducer(state, action) {
     switch (action.type) {
     case 'increment':
