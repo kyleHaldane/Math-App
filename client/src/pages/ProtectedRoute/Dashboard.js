@@ -1,16 +1,15 @@
 import React from "react";
-import Navbar from "../components/Navbar/index";
-import StartBtn from "../components/StartBtn/index"
-import TestResults from "../components/TestResults/index"
-import OverallTest from "../components/OverAllTest/index"
+import StartBtn from "../../components/StartBtn/index"
+import TestResults from "../../components/TestResults/index"
+import OverAllTest from "../../components/OverAllTest/index"
+import "./Dashboard.css"
 
 function Dashboard() {
     return(
         <div>
-            <Navbar />
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-12 startBtn">
                         <StartBtn />
                     </div>
                 </div>
@@ -19,7 +18,7 @@ function Dashboard() {
                         <TestResults />
                     </div>
                     <div className="col-6">
-                        <OverallTest />
+                        <OverAllTest />
                     </div>
                 </div>
             </div>

@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-	withRouter
-} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Auth from "../../utils/Auth";
 import { Link } from "react-router-dom";
 

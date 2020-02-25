@@ -36,7 +36,7 @@ class Nav extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
         <Link className="navbar-brand" to="/">
-          Auth Plate
+          Math-App
         </Link>
         
         <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">

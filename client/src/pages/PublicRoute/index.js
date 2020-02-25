@@ -9,9 +9,8 @@ class PublicRoute extends React.Component {
 	render() {
 		return (
             <div>
-                <h3>This is a Public Page Here</h3>
-                <p>Anyone can see this content</p>
-            </div>	
+				<img src={require("../../images/test.png")} alt="" className="img-responsive" />
+			</div>	
 		)
 	}
 }
