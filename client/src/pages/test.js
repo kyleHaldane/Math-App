@@ -10,10 +10,17 @@ function Test(){
   //Setting our componenets initial state
   const [questions, setQuestions] = useState([])
   const [choices, setChoices] = useState([])
+  const ids = []
+
+  //Creating ids array
+  function createIdsArray(){
+  for(let i = 0; i < questions.length; ++i){
+      ids[i] = questions.id;
+  }}
 
   //Tracking question number with reducer
   const questionNumber = {count: 0};
-  
+
   function reducer(state, action) {
     switch (action.type) {
     case 'increment':
@@ -28,6 +35,7 @@ function Test(){
 
   useEffect(() => {
     loadQuestions()
+    createIdsArray()
   }, [])
 
   function loadQuestions(){
@@ -82,7 +90,8 @@ function Test(){
       />
       <Submit 
         handleFormSubmit={handleFormSubmit}
-        choices={choices}/>
+        choices={choices}
+        ids={ids}/>
     </div>
   )
 }
