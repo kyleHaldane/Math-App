@@ -1,4 +1,3 @@
-import React from "react";
 import React, { useState, useEffect, useReducer } from "react";
 import API from "../utils/API";
 import Display from "../components/Display";
@@ -11,11 +10,13 @@ function Test(){
   const [questions, setQuestions] = useState([])
   const [choices, setChoices] = useState([])
   const ids = []
+  const correctArray = []
 
   //Creating ids array
   function createIdsArray(){
   for(let i = 0; i < questions.length; ++i){
-      ids[i] = questions.id;
+      ids[i] = questions[i].id;
+      correctArray[i] = questions[i].correctAnswer;
   }}
 
   //Tracking question number with reducer
@@ -31,7 +32,7 @@ function Test(){
       throw new Error();
     }
   }  
-  const [questionNumber, dispatch] = useReducer(reducer, questionNumber);
+  const [state, dispatch] = useReducer(reducer, questionNumber);
 
   useEffect(() => {
     loadQuestions()
@@ -54,19 +55,18 @@ function Test(){
       .catch(err => console.log(err))
   }
 
-  function handleFormSubmit(input) {
-    event.preventDefault();
+  function handleFormSubmit(selected, correctAnswer, id) {
+
     let gotIt = null
-    if(selected === input.correctAnswer)
+    if(selected === correctAnswer)
       gotIt = true
     else
       gotIt = false
 
-    API.saveQuestion({
+    API.saveQuestion(id, {
       answered: true,
-      studentAnswered: studentAnswer,
+      studentAnswered: selected,
       answeredCorrectly: gotIt
-      
     })
   }
 
@@ -78,8 +78,8 @@ function Test(){
     <div>
       <Navbar />
       <Display 
-        testQuestion={questions[questionNumber.count]}
-        questionNumber={questionNumber}
+        testQuestion={questions[state.count]}
+        questionNumberState={state}
         handleAnswerClick={handleAnswerClick}
         choices={choices}
         setChoices={setChoices}
@@ -91,7 +91,8 @@ function Test(){
       <Submit 
         handleFormSubmit={handleFormSubmit}
         choices={choices}
-        ids={ids}/>
+        ids={ids}
+        correctAnswers={correctAnswers}/>
     </div>
   )
 }

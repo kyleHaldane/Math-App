@@ -13,9 +13,9 @@ function Display(props){
                 choiceC={props.choiceC}
                 choiceD={props.choiceD}
                 clicking={props.handleAnswerClick}
-                questionNumber={props.questionNumber}
+                questionNumberState={props.questionNumberState}
                 choices={props.choices}
-                setChoices={setChoices}
+                setChoices={props.setChoices}
                 />
         </div>
     )

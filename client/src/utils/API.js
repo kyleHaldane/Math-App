@@ -8,6 +8,6 @@ export default {
 
   // Saves a book to the database
   saveQuestions: function(q) {
-    return axios.post("/api/questions/", q);
+    return axios.post("api/questions", q);
   }
 };
