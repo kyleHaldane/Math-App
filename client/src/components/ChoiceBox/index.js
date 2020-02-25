@@ -9,7 +9,7 @@ function ChoiceBox(props) {
     <Choice 
       option={props.choiceA}
       clicking={props.clicking}
-      questionNumber={props.questionNumber}
+      questionNumberState={props.questionNumberState}
       choices={props.choices}
       setChoices={props.setChoices}/>
     </li>
@@ -17,7 +17,7 @@ function ChoiceBox(props) {
     <Choice 
       option={props.choiceB}
       clicking={props.clicking}
-      questionNumber={props.questionNumber}
+      questionNumberState={props.questionNumberState}
       choices={props.choices}
       setChoices={props.setChoices}/>
     </li>
@@ -25,7 +25,7 @@ function ChoiceBox(props) {
     <Choice 
       option={props.choiceC}
       clicking={props.clicking}
-      questionNumber={props.questionNumber}
+      questionNumberState={props.questionNumberState}
       choices={props.choices}
       setChoices={props.setChoices}/>
     </li>
@@ -33,7 +33,7 @@ function ChoiceBox(props) {
     <Choice 
       option={props.choiceD}
       clicking={props.clicking}
-      questionNumber={props.questionNumber}
+      questionNumberState={props.questionNumberState}
       choices={props.choices}
       setChoices={props.setChoices}/>
     </li>

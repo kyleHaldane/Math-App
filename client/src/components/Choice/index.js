@@ -6,7 +6,7 @@ function Choice(props){
 
   function arraySetting(){
     let array = props.choices;
-    array[props.questionNumber.count] = props.option
+    array[props.questionNumberState.count] = props.option
     props.setChoices(array)
   }
 
