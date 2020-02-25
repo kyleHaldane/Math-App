@@ -5,31 +5,26 @@ import Nav from "../src/components/Nav/index";
 import Login from "../src/components/Login/index";
 import Register from "../src/components/Register/index";
 import { Container } from "../src/components/Grid/index";
-import PublicRoute from "../src/pages/PublicRoute/index";
-import ProtectedRoute from "../src/pages/ProtectedRoute/index";
+import Dashboard from "./pages/ProtectedRoute/Dashboard";
+import Public from "../src/pages/PublicRoute/index"
 import './App.css';
 
-//I want to add some basic inline styling here, even though we are bringing in styles
-const listStyle = {
-	color: 'cornflowerblue',
-	listStyle:'none'
-  };
 //Now we have all the stuff we need .. let's render some components with the Router
 const Authentication = () => (
 	<Router>
 		<div>
       		<Nav className="App-header"/>
 			<Container>
-				<ul style={listStyle}>
-					<li><Link to="/public">Public Page</Link></li>
-					<li><Link to="/protected">Protected Page</Link></li>
-					<li><Link to="/register">Register a New User</Link></li>
-				</ul>
+				<div className="row nwo">
+					<div className="col-4"><Link to="/public">Public Page</Link></div>
+					<div className="col-4"><Link to="/protected">Protected Page</Link></div>
+					<div className="col-4"><Link to="/register">Register a New User</Link></div>
+				</div>
 				<Switch>
-					<Route path="/public" component={PublicRoute}/>
+					<Route exact path="/public" component={Public}/>
 					<Route path="/login" component={Login}/>
 					<Route path="/register" component={Register}/>
-					<PrivateRoute path="/protected" component={ProtectedRoute}/>
+					<PrivateRoute path="/protected" component={Dashboard}/>
 					{/* <Route component={NoMatch} /> */}
 				</Switch>
 			</Container>

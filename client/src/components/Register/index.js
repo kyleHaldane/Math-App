@@ -1,4 +1,3 @@
-  
 import React from 'react';
 import RegisterForm from "../RegisterForm";
 //The component for doing the actual signup of the User

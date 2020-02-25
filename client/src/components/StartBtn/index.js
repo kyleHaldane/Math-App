@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 const StartBtn = (props) => {
   return (
     <div>
-      <Button color="primary">primary</Button>{' '}
+      <Button color="secondary" size="lg">Start Test</Button>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
-const OverallTest = (props) => {
+const OverAllTest = (props) => {
   return (
     <ListGroup>
       <ListGroupItem>Cras justo odio</ListGroupItem>
@@ -14,4 +14,4 @@ const OverallTest = (props) => {
 
 }
 
-export default OverallTest;
+export default OverAllTest;
