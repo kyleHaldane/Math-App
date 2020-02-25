@@ -1,9 +1,11 @@
 import React from "react";
 import { Button } from "reactstrap";
+import API from "../../utils/API"
+
 
 function storage(){
     for(let i = 0; i < props.choices; ++i){
-        
+        API.saveQuestions({})
     }
 }
 
