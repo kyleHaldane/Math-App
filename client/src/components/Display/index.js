@@ -1,7 +1,7 @@
 import React from "react";
 import Question from "../Question";
 import ChoiceBox from "../ChoiceBox"
-import Submit from "../Submit";
+
 
 function Display(props){
     return(

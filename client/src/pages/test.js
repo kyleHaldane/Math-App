@@ -14,9 +14,9 @@ function Test(){
 
   //Creating ids array
   function createIdsArray(){
-  for(let i = 0; i < questions.length; ++i){
-      ids[i] = questions[i].id;
-      correctArray[i] = questions[i].correctAnswer;
+    for(let i = 0; i < questions.length; ++i){
+        ids[i] = questions[i].id;
+        correctArray[i] = questions[i].correctAnswer;
   }}
 
   //Tracking question number with reducer
@@ -47,13 +47,7 @@ function Test(){
       .catch(err => console.log(err))
   }
 
-  function saveResults() {
-    API.saveQuestions()
-      .then(res =>
-        setResults(res.data)
-      )
-      .catch(err => console.log(err))
-  }
+
 
   function handleFormSubmit(selected, correctAnswer, id) {
 
@@ -92,7 +86,7 @@ function Test(){
         handleFormSubmit={handleFormSubmit}
         choices={choices}
         ids={ids}
-        correctAnswers={correctAnswers}/>
+        correctAnswers={correctArray}/>
     </div>
   )
 }
